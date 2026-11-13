@@ -42,25 +42,7 @@
   const onScroll = () => header.classList.toggle("is-scrolled", scrollY > 40);
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-  /* ---------- contadores ---------- */
-  const fmt = new Intl.NumberFormat("pt-BR");
-  const runCounter = (el) => {
-    const end = +el.dataset.count, suf = el.dataset.suffix || "";
-    if (reduced) return;
-    const t0 = performance.now(), dur = 1800;
-    const step = (now) => {
-      const k = Math.min((now - t0) / dur, 1);
-      el.textContent = fmt.format(Math.round(end * (1 - Math.pow(1 - k, 3)))) + suf;
-      if (k < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
-      if (en.isIntersecting) { runCounter(en.target); io.unobserve(en.target); }
-    }), { threshold: 0.6 });
-    document.querySelectorAll("[data-count]").forEach((c) => io.observe(c));
-  }
+  /* contadores: agora são odômetros, em js/effects.js */
 
   if (!hasGsap || reduced) return;
   const { gsap, ScrollTrigger } = window;
