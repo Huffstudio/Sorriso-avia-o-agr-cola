@@ -33,4 +33,7 @@ python3 -m http.server 8080
 Abra http://localhost:8080.
 
 ## Publicar
-Funciona em qualquer hospedagem estática: GitHub Pages (Settings → Pages → branch), Netlify ou Vercel (arrastar a pasta).
+O site está no ar pelo GitHub Pages: https://huffstudio.github.io/Sorriso-avia-o-agr-cola/
+
+O Pages publica a branch `claude/agricultural-aviation-site-fzldjj` (pasta raiz). Cada push nessa branch atualiza o site em 1–2 minutos.
+Só envie para essa branch alterações já aprovadas. Se o trabalho passar para outra branch, troque a branch em Settings → Pages.
