@@ -36,4 +36,4 @@ Abra http://localhost:8080.
 O site está no ar pelo GitHub Pages: https://huffstudio.github.io/Sorriso-avia-o-agr-cola/
 
 O Pages publica a branch `claude/agricultural-aviation-site-fzldjj` (pasta raiz). Cada push nessa branch atualiza o site em 1–2 minutos.
-Só envie para essa branch alterações já aprovadas. Se o trabalho passar para outra branch, troque a branch em Settings → Pages.
+Só envie para essa branch alterações já aprovadas. Ao mudar CSS ou JS, aumente o `?v=` nos links do `index.html` para o navegador não usar a versão antiga guardada. Se o trabalho passar para outra branch, troque a branch em Settings → Pages.
