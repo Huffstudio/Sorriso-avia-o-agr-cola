@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" role="img" aria-label="Avião agrícola Ipanema verde e amarelo">
+  <style>
+    .prop{transform-origin:524px 106px;animation:spin .1s linear infinite}
+    @keyframes spin{0%{transform:scaleY(1)}50%{transform:scaleY(-1)}100%{transform:scaleY(1)}}
+    @media (prefers-reduced-motion:reduce){.prop{animation:none}}
+  </style>
+  <defs>
+    <linearGradient id="ipBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1FC22A"/><stop offset=".55" stop-color="#13801C"/><stop offset="1" stop-color="#0B5E14"/>
+    </linearGradient>
+    <linearGradient id="ipYellow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE14D"/><stop offset="1" stop-color="#E0B000"/>
+    </linearGradient>
+    <linearGradient id="ipGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9F7FF"/><stop offset="1" stop-color="#7FC4EA"/>
+    </linearGradient>
+  </defs>
+  <!-- estabilizador -->
+  <path d="M24 100 L140 96 L142 106 L30 110 Z" fill="url(#ipYellow)"/>
+  <!-- deriva -->
+  <path d="M66 100 L50 40 Q48 32 58 32 L92 34 Q100 35 104 44 L138 96 Z" fill="url(#ipBody)" stroke="#084510" stroke-width="2"/>
+  <path d="M58 40 L92 41 L98 54 L62 54 Z" fill="url(#ipYellow)"/>
+  <!-- fuselagem -->
+  <path d="M60 98 C150 90 240 80 290 76 L440 78 Q480 80 506 88 Q514 106 506 124 Q470 134 430 136 C340 140 220 132 62 110 Z" fill="url(#ipBody)" stroke="#084510" stroke-width="1.5"/>
+  <!-- capô motor a pistão -->
+  <path d="M440 78 Q480 80 506 88 Q514 106 506 124 Q470 134 440 136 Z" fill="#0E6E17"/>
+  <path d="M452 92 h40 M452 100 h44 M452 108 h44" stroke="#084510" stroke-width="2" stroke-linecap="round"/>
+  <!-- faixa amarela -->
+  <path d="M66 102 C180 98 280 96 380 98 L508 102 L508 112 L380 112 C280 114 180 112 68 106 Z" fill="url(#ipYellow)"/>
+  <rect x="456" y="118" width="20" height="9" rx="3" fill="#2A2A2A"/>
+  <!-- cabine -->
+  <path d="M286 78 Q290 38 318 34 L372 34 Q392 44 404 78 Z" fill="url(#ipGlass)" stroke="#F5C400" stroke-width="3"/>
+  <path d="M332 34 L334 78 M366 34 L378 78" stroke="#F5C400" stroke-width="2.5"/>
+  <path d="M298 68 Q302 48 318 42" stroke="#fff" stroke-width="3" fill="none" opacity=".8" stroke-linecap="round"/>
+  <path d="M384 36 L430 74" stroke="#2A2A2A" stroke-width="2.5"/>
+  <!-- asa -->
+  <path d="M236 130 Q270 114 362 116 Q404 118 408 126 Q402 134 362 138 L236 138 Z" fill="url(#ipYellow)" stroke="#B08A00" stroke-width="1.5"/>
+  <path d="M262 121 Q310 114 384 118" stroke="#13801C" stroke-width="3" fill="none"/>
+  <!-- barra de pulverização -->
+  <rect id="boom" x="232" y="140" width="44" height="5" rx="2.5" fill="#2A2A2A"/>
+  <path d="M240 145 v7 M254 145 v7 M268 145 v7" stroke="#2A2A2A" stroke-width="3" stroke-linecap="round"/>
+  <!-- trem -->
+  <path d="M356 134 Q366 156 378 174" stroke="#2A2A2A" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <circle cx="380" cy="184" r="20" fill="#1E1E1E"/>
+  <circle cx="380" cy="184" r="9" fill="#F5C400"/>
+  <circle cx="380" cy="184" r="3.5" fill="#1E1E1E"/>
+  <path d="M80 108 L72 126" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="70" cy="130" r="7" fill="#1E1E1E"/>
+  <!-- spinner e hélice -->
+  <path d="M506 90 Q530 102 526 106 Q530 110 506 122 Z" fill="url(#ipYellow)" stroke="#B08A00" stroke-width="1.5"/>
+  <ellipse cx="524" cy="106" rx="5" ry="70" fill="#9BB5A0" opacity=".25"/>
+  <g class="prop"><path d="M521 106 L518 40 Q524 34 528 40 L527 106 Z" fill="#2A2A2A"/><path d="M519 42 L528 42 L528 52 L518 52 Z" fill="#F5C400"/></g>
+  <text x="170" y="126" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#FFFFFF" letter-spacing="1">PR-SAA</text>
+</svg>
