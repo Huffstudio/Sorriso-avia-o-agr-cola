@@ -4,195 +4,148 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sorriso Aviação Agrícola | Pulverização aérea em Sorriso-MT</title>
-  <meta name="description" content="Sorriso Aviação Agrícola: pulverização aérea, semeadura, adubação e combate a incêndios com frota Air Tractor e Ipanema. Precisão no ar, produtividade no campo.">
-  <meta name="theme-color" content="#0B5E14">
+  <meta name="description" content="Aplicação aérea de defensivos, sementes e fertilizantes em Sorriso-MT e região. Frota Air Tractor, pilotos experientes e georreferenciamento em cada voo.">
+  <meta name="theme-color" content="#070A08">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sorriso Aviação Agrícola">
-  <meta property="og:description" content="Pulverização aérea com precisão, segurança e tecnologia em Sorriso-MT e região.">
-  <meta property="og:image" content="assets/logo-original.png">
+  <meta property="og:description" content="Precisão no ar. Aplicação aérea com segurança e tecnologia em Sorriso-MT.">
+  <meta property="og:image" content="assets/img/hero-voo.webp">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..900;1,700..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-voo-limpo.webp">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- cursor customizado -->
-  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
 
-  <!-- HEADER -->
-  <header class="header" id="topo">
-    <div class="header__inner container">
-      <a href="#inicio" class="header__logo" aria-label="Sorriso Aviação Agrícola - início">
-        <img src="assets/logo.png" alt="Sorriso Aviação Agrícola" width="92" height="68">
+  <!-- MENU -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Sorriso Aviação Agrícola, início">
+        <img src="assets/logo-escuro.png" alt="Sorriso Aviação Agrícola" width="76" height="56">
       </a>
       <nav class="nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
         <a href="#frota">Frota</a>
-        <a href="#contato">Contato</a>
+        <a href="#contato" class="nav__cta">Contato <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
       </nav>
-      <a href="#" class="btn btn--primary btn--sm magnetic" data-contact="whatsapp" target="_blank" rel="noopener">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg>
-        <span>Orçamento</span>
-      </a>
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+      <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <span></span><span></span>
+      </button>
     </div>
+    <nav class="menu-mobile" id="menu-mobile" aria-label="Menu">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#frota">Frota</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- TOPO -->
     <section class="hero" id="inicio">
-      <div class="hero__frame">
-        <div class="hero__sky" aria-hidden="true">
-          <div class="sun" data-speed="0.15"></div>
-          <img class="cloud cloud--1" src="assets/svg/nuvem.svg" alt="" data-speed="0.35">
-          <img class="cloud cloud--2" src="assets/svg/nuvem.svg" alt="" data-speed="0.2">
-          <img class="cloud cloud--3" src="assets/svg/nuvem.svg" alt="" data-speed="0.5">
-          <img class="hero__far-plane" src="assets/svg/ipanema.svg" alt="" data-speed="0.6">
+      <div class="hero__media" aria-hidden="true">
+        <div class="hero__frame">
+          <!-- Para usar vídeo no lugar da foto, troque a <img> por:
+               <video class="hero__bg" src="assets/video/topo.mp4" autoplay muted loop playsinline></video> -->
+          <img class="hero__bg" src="assets/img/hero-voo-limpo.webp" alt="">
+          <span class="plane-anchor"></span>
+        </div>
+        <div class="hero__shade"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__top">
+          <p>Aplicação aérea de defensivos, sementes e fertilizantes para quem produz em grande escala no Mato Grosso.</p>
+          <p class="hero__top-right"><strong data-count="250" data-suffix=" mil+">250 mil+</strong> hectares atendidos</p>
         </div>
 
-        <div class="hero__content container">
-          <p class="eyebrow" data-reveal="up"><span class="dot"></span> Sorriso · Mato Grosso</p>
-          <h1 class="hero__title" data-split>Precisão no ar, <em>produtividade</em> no campo.</h1>
-          <p class="hero__lead" data-reveal="up">Aplicação aérea de defensivos, sementes e fertilizantes com frota Air Tractor e Ipanema, pilotos experientes e tecnologia de georreferenciamento.</p>
-          <div class="hero__ctas" data-reveal="up">
-            <a href="#" class="btn btn--primary magnetic" data-contact="whatsapp" target="_blank" rel="noopener">
-              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg>
+        <div class="hero__bottom">
+          <p class="eyebrow">Safra 2026/27 · Agenda aberta</p>
+          <h1 class="hero__title">
+            <span class="line">Precisão</span>
+            <span class="line shiny">no ar.</span>
+          </h1>
+          <div class="hero__ctas">
+            <a href="#" class="btn btn--light" data-contact="whatsapp" target="_blank" rel="noopener">
               Solicitar orçamento
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="#servicos" class="btn btn--ghost magnetic">Conheça os serviços</a>
+            <a href="#frota" class="btn btn--ghost">Conheça a frota</a>
           </div>
-          <p class="hero__hint" aria-hidden="true"><span class="mouse"></span> Mova o mouse e role a página</p>
         </div>
-
-        <!-- campos em camadas (formas da logo) -->
-        <svg class="hero__fields" viewBox="0 0 1440 360" preserveAspectRatio="none" aria-hidden="true">
-          <path data-speed="-0.05" d="M0 170 C320 90 760 120 1440 40 L1440 360 L0 360 Z" fill="#02B210"/>
-          <path data-speed="-0.1" d="M0 230 C380 150 900 190 1440 120 L1440 360 L0 360 Z" fill="#13801C"/>
-          <path d="M0 236 C380 156 900 196 1440 126" stroke="#fff" stroke-width="10" fill="none"/>
-          <path data-speed="-0.15" d="M0 290 C460 230 980 260 1440 210 L1440 360 L0 360 Z" fill="#0B5E14"/>
-          <path d="M0 296 C460 236 980 266 1440 216" stroke="#fff" stroke-width="10" fill="none"/>
-        </svg>
       </div>
     </section>
 
-    <!-- AIR TRACTOR INTERATIVO: camada fixa que acompanha o mouse e "sai" do quadro -->
-    <div class="plane-stage" aria-hidden="true">
-      <canvas class="spray-canvas"></canvas>
-      <div class="hero-plane">
-        <div class="hero-plane__flip">
-          <svg class="at-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 230" focusable="false">
-  <style>
-    .prop{transform-origin:584px 108px;animation:spin .09s linear infinite}
-    @keyframes spin{0%{transform:scaleY(1)}50%{transform:scaleY(-1)}100%{transform:scaleY(1)}}
-    @media (prefers-reduced-motion:reduce){.prop{animation:none}}
-  </style>
-  <defs>
-    <linearGradient id="atBody" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFE14D"/><stop offset=".55" stop-color="#F5C400"/><stop offset="1" stop-color="#D9A800"/>
-    </linearGradient>
-    <linearGradient id="atGlass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E9F7FF"/><stop offset="1" stop-color="#7FC4EA"/>
-    </linearGradient>
-    <linearGradient id="atGreen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#16A31F"/><stop offset="1" stop-color="#0B5E14"/>
-    </linearGradient>
-  </defs>
-  <!-- estabilizador horizontal -->
-  <path d="M22 104 L150 100 L152 110 L28 113 Z" fill="url(#atGreen)"/>
-  <!-- deriva -->
-  <path d="M70 102 L46 36 Q44 26 56 26 L86 28 Q94 29 98 36 L142 98 Z" fill="url(#atBody)" stroke="#0B5E14" stroke-width="2"/>
-  <path d="M58 34 L84 35 L96 52 L66 52 Z" fill="url(#atGreen)"/>
-  <!-- fuselagem -->
-  <path d="M64 100 C170 92 280 80 330 78 L480 82 Q520 84 556 90 L560 126 Q520 132 480 134 C380 140 250 134 66 112 Z" fill="url(#atBody)" stroke="#8A6A00" stroke-width="1.5"/>
-  <!-- capô turbina -->
-  <path d="M470 82 L556 90 L560 126 L470 134 Z" fill="#FFE66B" opacity=".6"/>
-  <!-- faixa verde -->
-  <path d="M70 104 C190 100 300 98 420 100 L558 104 L559 114 L420 114 C300 116 190 114 72 108 Z" fill="url(#atGreen)"/>
-  <path d="M470 82 L470 134" stroke="#8A6A00" stroke-width="1.5"/>
-  <rect x="500" y="114" width="22" height="12" rx="3" fill="#3A3A3A"/>
-  <rect x="503" y="117" width="16" height="6" rx="2" fill="#1C1C1C"/>
-  <!-- cabine -->
-  <path d="M318 80 Q326 44 360 40 L408 42 Q426 52 436 80 Z" fill="url(#atGlass)" stroke="#0B5E14" stroke-width="3"/>
-  <path d="M372 41 L376 80 M404 42 L414 80" stroke="#0B5E14" stroke-width="2.5"/>
-  <path d="M332 70 Q340 52 360 48" stroke="#fff" stroke-width="3" fill="none" opacity=".8" stroke-linecap="round"/>
-  <!-- cortador de fio -->
-  <path d="M420 42 L470 76" stroke="#3A3A3A" stroke-width="2.5"/>
-  <!-- asa (perfil) -->
-  <path d="M262 132 Q300 116 400 118 Q448 120 452 128 Q446 136 400 140 L262 140 Z" fill="url(#atGreen)" stroke="#084510" stroke-width="1.5"/>
-  <path d="M290 122 Q340 116 420 120" stroke="#F5C400" stroke-width="3" fill="none"/>
-  <!-- barra de pulverização -->
-  <rect id="heroBoom" x="258" y="142" width="48" height="5" rx="2.5" fill="#3A3A3A"/>
-  <path d="M266 147 v7 M282 147 v7 M298 147 v7" stroke="#3A3A3A" stroke-width="3" stroke-linecap="round"/>
-  <!-- trem de pouso -->
-  <path d="M392 136 Q404 158 418 176" stroke="#2A2A2A" stroke-width="7" fill="none" stroke-linecap="round"/>
-  <circle cx="420" cy="186" r="22" fill="#1E1E1E"/>
-  <circle cx="420" cy="186" r="10" fill="#F5C400"/>
-  <circle cx="420" cy="186" r="4" fill="#1E1E1E"/>
-  <path d="M84 110 L74 128" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="72" cy="132" r="7" fill="#1E1E1E"/>
-  <!-- spinner e hélice -->
-  <path d="M556 90 Q590 104 586 108 Q590 112 558 126 Z" fill="url(#atGreen)" stroke="#084510" stroke-width="1.5"/>
-  <ellipse cx="584" cy="108" rx="5" ry="78" fill="#9BB5A0" opacity=".25"/>
-  <g class="prop"><path d="M581 108 L578 34 Q584 28 588 34 L587 108 Z" fill="#2A2A2A"/><path d="M579 36 L588 36 L588 46 L578 46 Z" fill="#F5C400"/></g>
-</svg>
-        </div>
-      </div>
+    <!-- Air Tractor recortado da foto: sai do quadro ao rolar -->
+    <div class="plane-layer" aria-hidden="true">
+      <img class="plane" src="assets/img/air-tractor-recorte.webp" alt="">
     </div>
 
     <!-- NÚMEROS -->
-    <section class="stats">
+    <section class="stats" aria-label="Números">
       <div class="container stats__grid">
-        <div class="stat" data-reveal="up"><strong><span data-count="250" data-suffix="mil+">0</span></strong><span>hectares atendidos</span></div>
-        <div class="stat" data-reveal="up"><strong><span data-count="15" data-suffix="+">0</span></strong><span>anos de experiência</span></div>
-        <div class="stat" data-reveal="up"><strong><span data-count="6">0</span></strong><span>aeronaves na frota</span></div>
-        <div class="stat" data-reveal="up"><strong><span data-count="100" data-suffix="%">0</span></strong><span>aplicações georreferenciadas</span></div>
+        <div class="stat" data-reveal><span class="stat__num"><span data-count="15" data-suffix="+">15+</span></span><span class="stat__label">anos de operação</span></div>
+        <div class="stat" data-reveal><span class="stat__num"><span data-count="250" data-suffix=" mil">250 mil</span></span><span class="stat__label">hectares por safra</span></div>
+        <div class="stat" data-reveal><span class="stat__num"><span data-count="6">6</span></span><span class="stat__label">aeronaves agrícolas</span></div>
+        <div class="stat" data-reveal><span class="stat__num">DGPS</span><span class="stat__label">em 100% dos voos</span></div>
+      </div>
+    </section>
+
+    <!-- FAIXA FOTO 1 -->
+    <section class="band" aria-label="Campo visto do ar">
+      <img class="band__img" src="assets/img/faixa-campo.webp" alt="Lavouras e represa vistas do alto, ao entardecer" loading="lazy" data-parallax>
+      <div class="container band__text">
+        <p data-reveal>Cobertura uniforme.<br>Mais área em menos tempo.</p>
       </div>
     </section>
 
     <!-- SERVIÇOS -->
-    <section class="section services" id="servicos">
-      <img class="cross-plane cross-plane--ipanema" src="assets/svg/ipanema.svg" alt="" aria-hidden="true">
+    <section class="section" id="servicos">
       <div class="container">
         <header class="section__head">
-          <p class="eyebrow" data-reveal="up"><span class="dot"></span> Serviços</p>
-          <h2 class="section__title" data-split>Soluções aéreas para cada fase da lavoura</h2>
-          <p class="section__lead" data-reveal="up">Aplicação rápida, uniforme e sem amassar a cultura. Cobertura de grandes áreas em poucas horas, no momento certo.</p>
+          <div>
+            <p class="eyebrow" data-reveal>Serviços</p>
+            <h2 class="section__title" data-reveal>Aplicação aérea para cada fase da lavoura.</h2>
+          </div>
+          <p class="section__lead" data-reveal>Entramos na janela certa, sem amassar a cultura e sem depender do solo. Cada voo é planejado conforme produto, clima e alvo.</p>
         </header>
 
-        <div class="cards">
-          <article class="card tilt" data-reveal="up">
-            <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M8 14h32M14 14v6M24 14v6M34 14v6"/><path d="M14 26c-2 4-2 6 0 8M24 26c-2 4-2 6 0 8M34 26c-2 4-2 6 0 8" class="dash"/></svg></div>
+        <div class="services">
+          <article class="service" data-reveal>
+            <svg class="service__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9h24M9 9v4M16 9v4M23 9v4M8 18l-1 5M16 18v6M24 18l1 5"/></svg>
             <h3>Pulverização de defensivos</h3>
-            <p>Fungicidas, inseticidas e herbicidas aplicados com gotas calibradas e controle de deriva.</p>
+            <p>Fungicidas, inseticidas e herbicidas com gota calibrada e controle de deriva.</p>
           </article>
-          <article class="card tilt" data-reveal="up">
-            <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M24 40V22"/><path d="M24 26c-8 0-12-5-12-12 8 0 12 5 12 12zM24 22c0-7 4-12 12-12 0 7-4 12-12 12z"/></svg></div>
+          <article class="service" data-reveal>
+            <svg class="service__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28V15M16 18c-6 0-9-4-9-10 6 0 9 4 9 10ZM16 15c0-6 3-10 9-10 0 6-3 10-9 10Z"/></svg>
             <h3>Semeadura aérea</h3>
-            <p>Plantio de cobertura (braquiária, nabo, milheto) com distribuição homogênea, mesmo sobre a cultura em pé.</p>
+            <p>Plantas de cobertura como braquiária e milheto, distribuídas com a cultura ainda em pé.</p>
           </article>
-          <article class="card tilt" data-reveal="up">
-            <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M14 10h20l-3 8H17z"/><path d="M17 18l-5 20h24l-5-20"/><circle cx="20" cy="29" r="1.5"/><circle cx="28" cy="31" r="1.5"/><circle cx="24" cy="25" r="1.5"/></svg></div>
+          <article class="service" data-reveal>
+            <svg class="service__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M10 5h12l-2 6h-8zM12 11 8 27h16l-4-16M13 19h0M19 21h0M16 16h0"/></svg>
             <h3>Adubação e fertilização</h3>
             <p>Fertilizantes sólidos e foliares aplicados com agilidade nas janelas mais curtas.</p>
           </article>
-          <article class="card tilt" data-reveal="up">
-            <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M24 6c2 8 10 11 10 21a10 10 0 0 1-20 0c0-5 3-8 5-10 0 4 2 6 4 6 0-6-1-11 1-17z"/></svg></div>
+          <article class="service" data-reveal>
+            <svg class="service__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c1.5 6 7 8 7 15a7 7 0 0 1-14 0c0-3.5 2-5.5 3.5-7 0 3 1.5 4.5 3 4.5 0-4.5-1-8 .5-12.5Z"/></svg>
             <h3>Combate a incêndios</h3>
-            <p>Apoio rápido no combate a incêndios em áreas rurais e de preservação.</p>
+            <p>Apoio rápido no combate a focos em áreas rurais e de preservação.</p>
           </article>
-          <article class="card tilt" data-reveal="up">
-            <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M18 6h12M20 6v12L10 36a4 4 0 0 0 3.5 6h21A4 4 0 0 0 38 36L28 18V6"/><path d="M15 30h18"/></svg></div>
+          <article class="service" data-reveal>
+            <svg class="service__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M12 4h8M13 4v9L6 25a2.5 2.5 0 0 0 2.2 3.8h15.6A2.5 2.5 0 0 0 26 25l-7-12V4M10 20h12"/></svg>
             <h3>Biológicos e maturadores</h3>
-            <p>Aplicação de produtos biológicos, dessecantes e maturadores com rastreabilidade total.</p>
+            <p>Produtos biológicos, dessecantes e maturadores com rastreabilidade completa.</p>
           </article>
-          <article class="card card--cta tilt" data-reveal="up">
-            <h3>Precisa de uma aplicação?</h3>
-            <p>Fale com nossa equipe e receba um orçamento para sua área.</p>
-            <a href="#" class="btn btn--yellow magnetic" data-contact="whatsapp" target="_blank" rel="noopener">
-              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg> Chamar no WhatsApp
-            </a>
+          <article class="service service--cta" data-reveal>
+            <h3>Tem uma área para aplicar?</h3>
+            <p>Informe cultura, cidade e hectares. Retornamos com o orçamento.</p>
+            <a href="#" class="link-arrow" data-contact="whatsapp" target="_blank" rel="noopener">Falar no WhatsApp
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
         </div>
       </div>
@@ -201,40 +154,47 @@
     <!-- SOBRE -->
     <section class="section about" id="sobre">
       <div class="container about__grid">
-        <div class="about__visual">
-          <div class="about__badge" data-speed="0.12">
-            <img src="assets/logo-simbolo.png" alt="" width="200">
-          </div>
-          <div class="about__card about__card--a" data-speed="-0.08"><strong>DGPS</strong><span>Faixas guiadas por satélite</span></div>
-          <div class="about__card about__card--b" data-speed="0.18"><strong>Relatório</strong><span>Mapa de cada aplicação</span></div>
-        </div>
+        <figure class="about__media" data-reveal>
+          <img src="assets/img/sobre.webp" alt="Air Tractor amarelo estacionado no pátio ao entardecer" loading="lazy" data-parallax>
+        </figure>
         <div class="about__text">
-          <p class="eyebrow" data-reveal="up"><span class="dot"></span> Sobre nós</p>
-          <h2 class="section__title" data-split>Do coração do agro, para a sua lavoura</h2>
-          <p data-reveal="up">A Sorriso Aviação Agrícola nasceu na capital nacional do agronegócio para levar ao produtor uma aplicação aérea eficiente, segura e responsável. Cada voo é planejado com base na cultura, no clima e no produto, garantindo o melhor resultado com o menor desperdício.</p>
-          <ul class="checks">
-            <li data-reveal="left">Pilotos agrícolas habilitados e experientes</li>
-            <li data-reveal="left">Operação conforme normas do MAPA e da ANAC</li>
-            <li data-reveal="left">Controle de deriva e monitoramento meteorológico</li>
-            <li data-reveal="left">Relatórios georreferenciados após cada aplicação</li>
-          </ul>
+          <p class="eyebrow" data-reveal>Sobre nós</p>
+          <h2 class="section__title" data-reveal>Nascemos na capital do agronegócio.</h2>
+          <p data-reveal>A Sorriso Aviação Agrícola leva ao produtor uma aplicação aérea eficiente, segura e responsável. Planejamos cada voo com base na cultura, no clima e no produto, para entregar o melhor resultado com o menor desperdício.</p>
+          <dl class="facts">
+            <div data-reveal><dt>Pilotos</dt><dd>Habilitados e experientes em aplicação agrícola</dd></div>
+            <div data-reveal><dt>Conformidade</dt><dd>Operação conforme normas do MAPA e da ANAC</dd></div>
+            <div data-reveal><dt>Deriva</dt><dd>Controle de gota e monitoramento meteorológico</dd></div>
+            <div data-reveal><dt>Relatórios</dt><dd>Mapa georreferenciado entregue após cada aplicação</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
+    <!-- FAIXA FOTO 2 -->
+    <section class="band band--tall" aria-label="Frota no pátio">
+      <img class="band__img" src="assets/img/patio.webp" alt="Aviões agrícolas amarelo e verde no pátio ao pôr do sol" loading="lazy" data-parallax>
+      <div class="container band__text">
+        <p data-reveal>Frota pronta<br>para a sua safra.</p>
+      </div>
+    </section>
+
     <!-- FROTA -->
-    <section class="section fleet" id="frota">
+    <section class="section" id="frota">
       <div class="container">
-        <header class="section__head section__head--center">
-          <p class="eyebrow" data-reveal="up"><span class="dot"></span> Nossa frota</p>
-          <h2 class="section__title" data-split>Aeronaves feitas para o campo</h2>
+        <header class="section__head">
+          <div>
+            <p class="eyebrow" data-reveal>Frota</p>
+            <h2 class="section__title" data-reveal>Aeronaves feitas para o campo.</h2>
+          </div>
+          <p class="section__lead" data-reveal>Manutenção em dia, barras de pulverização calibradas e equipamentos de navegação em todas as aeronaves.</p>
         </header>
 
-        <div class="fleet__list">
-          <article class="plane-card" data-reveal="left">
-            <div class="plane-card__img"><img src="assets/svg/air-tractor.svg" alt="Ilustração do Air Tractor amarelo com faixa verde" loading="lazy"></div>
-            <div class="plane-card__body">
-              <span class="tag">Turbo-hélice</span>
+        <div class="fleet">
+          <article class="aircraft" data-reveal>
+            <div class="aircraft__img"><img src="assets/img/frota-air-tractor.webp" alt="Air Tractor amarelo com faixas azuis" loading="lazy"></div>
+            <div class="aircraft__body">
+              <p class="aircraft__type">Turbo-hélice</p>
               <h3>Air Tractor AT-502</h3>
               <p>Robusto e veloz, ideal para grandes áreas. Alta capacidade de carga e rendimento operacional.</p>
               <dl class="specs">
@@ -244,12 +204,12 @@
               </dl>
             </div>
           </article>
-          <article class="plane-card plane-card--alt" data-reveal="right">
-            <div class="plane-card__img"><img src="assets/svg/ipanema.svg" alt="Ilustração do Ipanema verde com faixa amarela" loading="lazy"></div>
-            <div class="plane-card__body">
-              <span class="tag tag--green">Fabricação nacional</span>
+          <article class="aircraft" data-reveal>
+            <div class="aircraft__img"><img src="assets/img/frota-verde.webp" alt="Avião agrícola verde com faixas brancas" loading="lazy"></div>
+            <div class="aircraft__body">
+              <p class="aircraft__type">Fabricação nacional</p>
               <h3>Embraer EMB-202 Ipanema</h3>
-              <p>O avião agrícola brasileiro, ágil em áreas menores e movido a etanol. Econômico e versátil.</p>
+              <p>O avião agrícola brasileiro: ágil em áreas menores, movido a etanol e econômico.</p>
               <dl class="specs">
                 <div><dt>Tanque</dt><dd>950 L</dd></div>
                 <div><dt>Faixa de aplicação</dt><dd>até 18 m</dd></div>
@@ -259,37 +219,24 @@
           </article>
         </div>
       </div>
-      <img class="cross-plane cross-plane--at" src="assets/svg/air-tractor.svg" alt="" aria-hidden="true">
     </section>
 
     <!-- CONTATO -->
     <section class="section contact" id="contato">
-      <div class="container contact__box">
+      <div class="container contact__grid">
         <div class="contact__text">
-          <p class="eyebrow eyebrow--light" data-reveal="up"><span class="dot"></span> Contato</p>
-          <h2 class="section__title" data-split>Vamos decolar juntos?</h2>
-          <p data-reveal="up">Fale com a nossa equipe e agende a aplicação na sua propriedade.</p>
-          <div class="contact__btns">
-            <a href="#" class="contact-btn magnetic" data-contact="whatsapp" target="_blank" rel="noopener" data-reveal="up">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg>
-              <span><small>WhatsApp</small><b data-contact-text="whatsapp">(66) 99999-9999</b></span>
-            </a>
-            <a href="#" class="contact-btn magnetic" data-contact="telefone" data-reveal="up">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
-              <span><small>Telefone</small><b data-contact-text="telefone">(66) 3544-0000</b></span>
-            </a>
-            <a href="#" class="contact-btn magnetic" data-contact="email" data-reveal="up">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
-              <span><small>E-mail</small><b data-contact-text="email">contato@sorrisoaviacao.com.br</b></span>
-            </a>
-          </div>
-          <p class="contact__addr" data-reveal="up">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
-            <span data-contact-text="endereco">Sorriso - MT</span>
-          </p>
+          <p class="eyebrow" data-reveal>Contato</p>
+          <h2 class="section__title" data-reveal>Vamos planejar sua próxima aplicação.</h2>
+          <p data-reveal>Fale com a equipe e agende o voo na sua propriedade.</p>
+          <ul class="contact__list">
+            <li data-reveal><a href="#" data-contact="whatsapp" target="_blank" rel="noopener"><span>WhatsApp</span><b data-contact-text="whatsapp">(66) 99999-9999</b><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+            <li data-reveal><a href="#" data-contact="telefone"><span>Telefone</span><b data-contact-text="telefone">(66) 3544-0000</b><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+            <li data-reveal><a href="#" data-contact="email"><span>E-mail</span><b data-contact-text="email">contato@sorrisoaviacao.com.br</b><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+            <li data-reveal><div><span>Base</span><b data-contact-text="endereco">Sorriso - MT</b></div></li>
+          </ul>
         </div>
-        <div class="contact__map" data-reveal="up">
-          <iframe title="Mapa - Sorriso Aviação Agrícola" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contact__map" data-reveal>
+          <iframe title="Mapa da Sorriso Aviação Agrícola" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -297,26 +244,18 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <img src="assets/logo.png" alt="Sorriso Aviação Agrícola" width="120" height="89" loading="lazy">
+      <img src="assets/logo-escuro.png" alt="Sorriso Aviação Agrícola" width="98" height="72" loading="lazy">
       <nav class="footer__nav" aria-label="Rodapé">
         <a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#frota">Frota</a><a href="#contato">Contato</a>
         <a href="#" data-contact="instagram" target="_blank" rel="noopener">Instagram</a>
       </nav>
-      <p class="footer__copy">© <span id="ano"></span> Sorriso Aviação Agrícola. Todos os direitos reservados.</p>
+      <p class="footer__copy">© <span id="ano">2026</span> Sorriso Aviação Agrícola · Sorriso, Mato Grosso</p>
     </div>
   </footer>
 
   <a href="#" class="whats-float" data-contact="whatsapp" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
   </a>
-
-  <!-- ícones -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
-  </svg>
 
   <script src="js/vendor/gsap.min.js"></script>
   <script src="js/vendor/ScrollTrigger.min.js"></script>

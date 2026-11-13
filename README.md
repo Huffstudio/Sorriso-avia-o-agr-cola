@@ -16,11 +16,15 @@ Todos os botões do site são preenchidos automaticamente a partir desse arquivo
 index.html          página
 css/style.css       estilos (cores no topo, em :root)
 js/config.js        dados de contato
-js/plane.js         Air Tractor interativo do topo (segue o mouse, pulveriza e sai da tela ao rolar)
-js/main.js          rolagem suave, revelações, parallax, contadores, cursor, botões magnéticos
+js/plane.js         Air Tractor do topo: recortado da foto, se solta e sai da tela ao rolar
+js/main.js          rolagem suave, revelações, parallax das fotos, contadores, menu
 js/vendor/          GSAP 3.12.5, ScrollTrigger e Lenis 1.1.13 (cópias locais)
-assets/             logo e ilustrações SVG (Air Tractor, Ipanema, nuvem)
+assets/             logo (versão para fundo escuro) e fotos em assets/img
 ```
+
+## Trocar a foto do topo por vídeo
+Em `index.html`, dentro de `.hero__frame`, troque a `<img class="hero__bg">` pela linha de `<video>` que está comentada logo acima e coloque o arquivo em `assets/video/topo.mp4`.
+O Air Tractor recortado (`assets/img/air-tractor-recorte.webp`) foi posicionado para casar com a foto atual; com outro fundo, ajuste a posição de `.plane-anchor` em `css/style.css` ou remova o avião.
 
 ## Visualizar localmente
 ```bash
