@@ -124,17 +124,20 @@
     });
   });
 
-  /* ---------- cartões que empilham ---------- */
+  /* ---------- cartões que empilham ----------
+     Um cartão só encolhe e escurece enquanto o próximo está de fato
+     passando por cima dele (do momento em que encosta até grudar). */
   const cards = gsap.utils.toArray(".stack__card");
+  const stickyTop = (el) => parseFloat(getComputedStyle(el).top) || 120;
   cards.forEach((card, i) => {
     const next = cards[i + 1];
     if (!next) return;
-    gsap.to(card, {
-      scale: 0.92, filter: "brightness(.65)", ease: "none",
+    gsap.fromTo(card, { scale: 1, filter: "brightness(1)" }, {
+      scale: 0.94, filter: "brightness(.7)", ease: "none", immediateRender: false,
       scrollTrigger: {
         trigger: next,
-        start: "top bottom",
-        end: () => "top " + (parseFloat(getComputedStyle(next).top) || 120) + "px",
+        start: () => "top " + (stickyTop(card) + card.offsetHeight) + "px",
+        end: () => "top " + stickyTop(next) + "px",
         scrub: true, invalidateOnRefresh: true
       }
     });
