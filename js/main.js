@@ -23,8 +23,6 @@
     const v = texts[el.dataset.contactText];
     if (v) el.textContent = v;
   });
-  const map = document.querySelector(".contact__map iframe");
-  if (map) map.src = `https://www.google.com/maps?q=${encodeURIComponent(cfg.mapaBusca || "Sorriso, MT")}&output=embed`;
   const ano = document.getElementById("ano");
   if (ano) ano.textContent = new Date().getFullYear();
 
@@ -92,6 +90,16 @@
       yPercent: 6, ease: "none",
       scrollTrigger: { trigger: img.parentElement, start: "top bottom", end: "bottom top", scrub: true }
     });
+  });
+
+  /* ---------- fade suave das faixas de foto ao rolar ---------- */
+  gsap.utils.toArray(".band").forEach((band) => {
+    const img = band.querySelector(".band__img");
+    if (!img) return;
+    gsap.timeline({ scrollTrigger: { trigger: band, start: "top bottom", end: "bottom top", scrub: 0.8 } })
+      .fromTo(img, { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, ease: "power1.out", duration: 0.4 })
+      .to(img, { opacity: 1, duration: 0.25 })
+      .to(img, { opacity: 0, ease: "power1.in", duration: 0.35 });
   });
 
   addEventListener("load", () => ScrollTrigger.refresh());

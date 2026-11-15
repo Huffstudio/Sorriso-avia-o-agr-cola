@@ -15,7 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero-voo-limpo.webp">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/leaflet.css">
+  <link rel="stylesheet" href="css/style.css?v=17">
 </head>
 <body>
 
@@ -55,7 +56,7 @@
           <!-- Para usar vídeo no lugar da foto, troque a <img> por:
                <video class="hero__bg" src="assets/video/topo.mp4" autoplay muted loop playsinline></video> -->
           <img class="hero__bg" src="assets/img/hero-voo-limpo.webp" alt="">
-          <span class="plane-anchor"><img class="plane" src="assets/img/air-tractor-recorte.webp" alt=""></span>
+          <span class="plane-anchor"><img class="plane" src="assets/img/air-tractor-recorte.webp?v=3" alt=""></span>
         </div>
         <div class="hero__shade"></div>
       </div>
@@ -103,7 +104,7 @@
 
     <!-- FAIXA FOTO 1 -->
     <section class="band" aria-label="Campo visto do ar">
-      <img class="band__img" src="assets/img/faixa-campo.webp" alt="Lavouras e represa vistas do alto, ao entardecer" loading="lazy" data-parallax>
+      <div class="band__media"><img class="band__img band__img--aereo" src="assets/img/galeria-voo-aereo.webp" alt="Air Tractor amarelo pulverizando a lavoura de soja, visto de cima" loading="lazy" data-parallax></div>
       <div class="container band__text">
         <p data-split>Cobertura uniforme.<br>Mais área em menos tempo.</p>
       </div>
@@ -180,7 +181,7 @@
     <section class="section about" id="sobre">
       <div class="container about__grid">
         <figure class="about__media" data-reveal>
-          <img src="assets/img/sobre.webp" alt="Air Tractor amarelo estacionado no pátio ao entardecer" loading="lazy" data-parallax>
+          <img src="assets/img/sobre.webp?v=2" alt="Ipanema PT-URC da Sorriso Aviação Agrícola na pista ao pôr do sol" loading="lazy" data-parallax>
         </figure>
         <div class="about__text">
           <p class="eyebrow" data-reveal>Sobre nós</p>
@@ -198,7 +199,7 @@
 
     <!-- FAIXA FOTO 2 -->
     <section class="band band--tall" aria-label="Frota no pátio">
-      <img class="band__img" src="assets/img/patio.webp" alt="Aviões agrícolas amarelo e verde no pátio ao pôr do sol" loading="lazy" data-parallax>
+      <div class="band__media"><img class="band__img" src="assets/img/patio.webp?v=2" alt="Aviões Ipanema laranja no pátio, com silos ao fundo" loading="lazy" data-parallax></div>
       <div class="container band__text">
         <p data-split>Frota pronta<br>para a sua safra.</p>
       </div>
@@ -216,7 +217,7 @@
           </header>
 
           <article class="aircraft glow">
-            <div class="aircraft__img"><img src="assets/img/frota-air-tractor.webp" alt="Air Tractor amarelo com faixas azuis" loading="lazy"></div>
+            <div class="aircraft__img"><img src="assets/img/frota-air-tractor.webp?v=2" alt="Air Tractor amarelo pulverizando sobre a lavoura" loading="lazy"></div>
             <div class="aircraft__body">
               <p class="aircraft__type">Turbo-hélice</p>
               <h3>Air Tractor AT-502</h3>
@@ -229,7 +230,7 @@
             </div>
           </article>
           <article class="aircraft glow">
-            <div class="aircraft__img"><img src="assets/img/frota-verde.webp" alt="Avião agrícola verde com faixas brancas" loading="lazy"></div>
+            <div class="aircraft__img"><img src="assets/img/frota-verde.webp?v=2" alt="Ipanema vermelho com a bandeira do Brasil na cauda" loading="lazy"></div>
             <div class="aircraft__body">
               <p class="aircraft__type">Fabricação nacional</p>
               <h3>Embraer EMB-202 Ipanema</h3>
@@ -241,8 +242,8 @@
               </dl>
             </div>
           </article>
-          <article class="gallery__photo glow">
-            <img src="assets/img/hero-voo.webp" alt="Dois aviões agrícolas em voo sobre a lavoura ao entardecer" loading="lazy">
+          <article class="gallery__photo gallery__photo--foto-topo glow">
+            <img src="assets/img/equipe-solo.webp?v=1" alt="Equipe de solo acompanhando a calibração da barra de um Ipanema laranja em voo rasante, com instrumentos de medição no campo" loading="lazy">
             <div class="gallery__photo-text">
               <h3>Equipe de solo e base própria</h3>
               <p>Abastecimento, mistura de calda e manutenção na base, para a aeronave voltar ao ar rápido.</p>
@@ -268,7 +269,20 @@
           </ul>
         </div>
         <div class="contact__map glow" data-reveal>
-          <iframe title="Mapa da Sorriso Aviação Agrícola" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="atuacao" id="mapa-atuacao" role="region" aria-label="Mapa da área de atuação"></div>
+          <div class="atuacao__ui">
+            <div class="atuacao__chips" role="group" aria-label="Ir para">
+              <button type="button" data-ir="tudo" class="is-on">Toda a região</button>
+              <button type="button" data-ir="base-0">Base Sorriso</button>
+              <button type="button" data-ir="base-1">Base Nova Canaã</button>
+              <button type="button" data-ir="extra-0">Pará</button>
+            </div>
+            <button type="button" class="atuacao__camada" data-camada>Mapa</button>
+          </div>
+          <div class="atuacao__info" aria-live="polite">
+            <p class="atuacao__titulo">Área de atuação</p>
+            <p class="atuacao__texto">Toque numa cidade para ver a distância e o tempo de voo a partir da base mais próxima.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -292,9 +306,11 @@
   <script src="js/vendor/gsap.min.js"></script>
   <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/vendor/lenis.min.js"></script>
-  <script src="js/config.js?v=4"></script>
+  <script src="js/config.js?v=5"></script>
   <script src="js/plane.js?v=4"></script>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/vendor/leaflet.min.js"></script>
+  <script src="js/mapa.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
   <script src="js/effects.js?v=4"></script>
 </body>
 </html>
