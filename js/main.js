@@ -31,6 +31,8 @@
   const setMenu = (open) => {
     document.body.classList.toggle("nav-open", open);
     btn && btn.setAttribute("aria-expanded", String(open));
+    btn && btn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    if (window.__lenis) open ? window.__lenis.stop() : window.__lenis.start();
   };
   btn && btn.addEventListener("click", () => setMenu(!document.body.classList.contains("nav-open")));
   document.querySelectorAll(".menu-mobile a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
@@ -50,6 +52,7 @@
   let lenis = null;
   if (typeof window.Lenis !== "undefined") {
     lenis = new window.Lenis({ duration: 1.1, smoothWheel: true });
+    window.__lenis = lenis;
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
